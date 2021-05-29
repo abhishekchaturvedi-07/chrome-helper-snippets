@@ -1,0 +1,6 @@
+let nameArray = ["Abhi", "Shek"]
+// console.log(nameArray[0])
+nameArray.push("Rocky")
+let lastElements = nameArray.length - 1
+
+console.log(nameArray[lastElements])

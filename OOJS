@@ -1,0 +1,30 @@
+class Person{
+    constructor(name){
+        console.log('Person construtor : ', name);
+        this.name = name
+    }
+    callName(){
+        console.log(`My name is ${this.name}`)
+    }
+    getName() {
+        return this.name
+    }
+}
+class Address extends Person{
+    constructor(name, address){
+        console.log('name: ', name);
+        super(name);
+        this.address = address
+    }
+     showAddress(){
+        console.log(`My name is ${this.name} and my address is ${this.address}`)
+    }
+    static x(){
+        return "sdljslkdjf"
+    }
+ }
+var addObj = new Address('Abhishek', 'Pune')
+console.log("addObj: ", addObj)
+addObj.showAddress()
+Address.x() // static function can be accessible without instanciation 
+Address.showAddress() // not accessible

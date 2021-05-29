@@ -1,0 +1,19 @@
+function serachValue(arr, val)
+{
+    let min = 0;
+    let max = arr.length - 1
+    while(min<= max)
+    {
+        let middle = Math.floor((min+max) / 2)
+        let currentElement = arr[middle]
+console.log('middle - ', middle )
+console.log('currentElement - ', currentElement)
+
+        if(arr[middle] < val){ console.log('if'); min = middle+1; console.log('if min - ',min)}
+        else if (arr[middle] > val) {console.log(' else if'); max = middle-1}
+        else { return middle}
+    }
+    return -1
+}
+
+serachValue([1,2,3,12,24,34,56,67,78,89,111,222,333], 222)

@@ -1,0 +1,20 @@
+var x = {
+    a: 1,
+    b:2,
+    c: {
+        f: 5
+    }
+}
+var y = x;
+y.a = 8
+console.log("x: ", x);
+//shallow copy
+var z = {...x}
+z.a = 9
+z.c.f = 12423
+//deep copy
+var m = JSON.parse(JSON.stringify(x))
+m.c.f = 845798749
+console.log("z: ", z )
+console.log("m: ", m )
+//shallow copy and deep copy

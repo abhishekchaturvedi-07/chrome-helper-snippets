@@ -1,0 +1,10 @@
+let num = 0;
+
+function sum(num){ return num + num}
+
+
+setTimeout(()=>{
+    console.log('Sum of 3: ', sum(3))
+},0)
+
+console.log('Sum of 5: ', sum(5))

@@ -1,0 +1,19 @@
+// function linearSearch(array,val){
+//     for( searchVal of array){
+// //         console.log(searchVal)
+//           if(searchVal === val)
+//             {
+//                 console.log( searchVal)
+//             }
+//     }
+// }
+
+function linearSearch(array,val){
+    for( let i = 0; i < array.length ; i++ )
+    {
+        if(array[i] === val)return i
+    }
+return -1
+}
+
+linearSearch([1,2,3,4],3)

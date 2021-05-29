@@ -1,0 +1,39 @@
+function anagrams(str1, str2)
+{
+    if(str1.length !== str2.length){return false}
+    console.log('str1- ',str1)
+    let obj1 = {}
+    for(var char of str1)
+    {
+        console.log('char of str1', char)
+        char = char.toLowerCase()
+//         obj1[char] = ( obj1[char] || 0) + 1
+           obj1[char] ? obj1[char] +=1 : obj1[char] = 1
+        
+    }
+    console.log('obj1- ',obj1)
+
+
+    let obj2={}
+    for(var char of str2)
+    {
+        obj2[char] = ( obj2[char] || 0) + 1
+    }
+    console.log('obj2- ', obj2)
+
+    for(let keys in obj1)
+    {
+        if(obj1[keys] !== obj2[keys]){ return false}
+    }
+
+// for(let char of str2)
+// {
+//     if(!obj1[char]){return false}
+//     else { obj1[char] -=1 }
+// }
+
+    return true
+}
+
+
+anagrams("Hello", "ollhe")

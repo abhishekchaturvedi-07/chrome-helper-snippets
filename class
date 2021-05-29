@@ -1,0 +1,19 @@
+class Person{
+    construtor(name){
+        this.name = name
+    }
+    function callName(){
+        console.log(`My name is ${this.name}`)
+    }
+}
+
+class Address extends Person{
+    constructor(props){
+        super(props);
+        this.address = address
+    }
+    function address(){
+        console.log(`My name is ${this.name} and my address is ${this.address}`)
+    }
+
+}

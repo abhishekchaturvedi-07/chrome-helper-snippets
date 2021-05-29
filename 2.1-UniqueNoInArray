@@ -1,0 +1,34 @@
+
+// VIA Frequency Counter Pattern
+// function totalUniqueNoInArray(arr)
+// {
+//     let obj = {}
+//     for (let num of arr)
+//     {
+//         obj[num] = (obj[num] || 0) +1
+//     }
+//     console.log(obj)
+//     return Object.keys(obj).length
+
+// }
+
+// VIA Multiple Pointer Pattern
+function totalUniqueNoInArray(arr)
+{
+    if(arr.length===0){return 0}
+    let i = 0;
+    
+    for(let j = i+1; j < arr.length; j++)
+    {
+        if(arr[i] !== arr[j])
+        {
+            i++
+            arr[i] = arr[j]
+        }
+        console.log(i,j)
+        
+    }
+    return i+1
+}
+
+totalUniqueNoInArray([1,1,1,2,3,3,4,4,4,5,5,6])
